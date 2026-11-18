@@ -100,12 +100,12 @@
 (function () {
   // t = Vorschlag (1 sehr sinnvoll ... 4 Blödsinn)
   const THINGS = [
-    { e: "🪥", t: "Zähne putzen", s: 1 },
+    { e: "🤥", t: "Jemanden anlügen, damit er glücklich bleibt", s: 2 },
     { e: "🤝", t: "Einem Freund in der Not helfen", s: 1 },
     { e: "🧠", t: "Den eigenen Standpunkt mit Argumenten begründen", s: 1 },
-    { e: "🏛️", t: "Nach dem gelungenen Leben suchen (Aristoteles: Eudaimonia)", s: 1 },
-    { e: "⚖️", t: "Prüfen, ob man wollen kann, dass alle so handeln (Kant)", s: 1 },
-    { e: "🍳", t: "Frühstücken", s: 2 },
+    { e: "🏛️", t: "Nach dem gelungenen Leben suchen", s: 1 },
+    { e: "⚖️", t: "Prüfen, ob man wollen kann, dass alle so handeln", s: 1 },
+    { e: "✍️", t: "Ein Gedicht schreiben, das nie jemand lesen wird", s: 2 },
     { e: "🛏️", t: "Jeden Morgen das Bett machen", s: 2 },
     { e: "🏃", t: "Zum Bus rennen, der schon abfährt", s: 2 },
     { e: "🔎", t: "Den Sinn des Lebens googeln", s: 2 },
@@ -207,7 +207,7 @@
     const counts = [1, 2, 3, 4].map(z => `${LABEL[z]}: ${cardsOf(z).children.length}`).join(" · ");
     let text = `<b>${same} von ${els.length} Karten liegen wie in meinem Vorschlag.</b>${counts}<br><br>`;
     if (far.length) text += `Deutlich anders als mein Vorschlag: „${far.slice(0, 3).join("“, „")}“${far.length > 3 ? " …" : ""}. Kannst du begründen, nach welchem Maßstab du sortiert hast?<br><br>`;
-    text += `<b>Zum Nachdenken:</b>Wer entscheidet, was „sinnvoll" ist: nützlich, moralisch richtig, glücklich machend oder von dir selbst gewählt? Je nach Maßstab (Aristoteles, Kant, Camus) wandern die Karten in andere Felder.`;
+    text += `<b>Zum Nachdenken:</b>Wer entscheidet, was „sinnvoll" ist: nützlich, moralisch richtig, glücklich machend oder von dir selbst gewählt? Je nach Maßstab wandern die Karten in andere Felder.`;
     msg.innerHTML = text; msg.className = "show"; msg.scrollIntoView({ behavior: "smooth", block: "nearest" });
   };
 
